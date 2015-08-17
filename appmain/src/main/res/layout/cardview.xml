@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view ="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="20dp"
+    card_view:cardCornerRadius="4dp"
+    >
+    <!-- card_view:cardBackgroundColor="@color/abc_input_method_navigation_guard"-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <!-- Header-->
+        <RelativeLayout
+            android:background="@color/accent_material_light"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/image_user"
+                android:padding="8dp"
+                android:src="@drawable/ic_backup"
+                android:layout_width="64dp"
+                android:layout_height="64dp" />
+            <LinearLayout
+                android:layout_toRightOf="@+id/image_user"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:id="@+id/tvName"
+
+                    android:text="Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvWorkplace"
+                    android:text="WorkPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:background="@color/button_material_dark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <!-- Activity-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_activity"
+                android:text="test"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp" />
+        </RelativeLayout>
+        <!-- Toolbar-->
+        <View
+            android:background="@color/button_material_dark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <RelativeLayout
+            android:background="@color/accent_material_light"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

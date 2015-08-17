@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home"
+            android:icon="@drawable/ic_autorenew"
+            android:title="Test1"/>
+
+        <item
+            android:id="@+id/drawer_favourite"
+            android:icon="@drawable/ic_backup"
+            android:title="Test 2"/>
+        ...
+
+        <item
+            android:id="@+id/drawer_settings"
+            android:icon="@drawable/ic_border_color_white"
+            android:title="Test3"/>
+
+    </group>
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home2"
+            android:icon="@drawable/ic_autorenew"
+            android:title="Test1">
+            <menu>
+                <item
+                    android:id="@+id/drawer_favourite4"
+                    android:icon="@drawable/ic_assignment_white"
+                    android:title="Submenu1"/>
+
+                <item
+                    android:id="@+id/drawer_downloaded"
+                    android:icon="@drawable/ic_backup"
+                    android:title="Sub Menu 2"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/drawer_favourite2"
+            android:icon="@drawable/ic_backup"
+            android:title="Test 2"/>
+        ...
+
+        <item
+            android:id="@+id/drawer_settings2"
+            android:icon="@drawable/ic_border_color_white"
+            android:title="Test3"/>
+
+    </group>
+</menu>

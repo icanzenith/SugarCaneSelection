@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_menu_height">250dp</dimen>
+    <dimen name="text_menu_button">16sp</dimen>
+    <dimen name="picture_thumb_width">200dp</dimen>
+    <dimen name="table_name">22sp</dimen>
+
+    <dimen name="review2_title">32sp</dimen>
+    <dimen name="review2_data">24sp</dimen>
+    <dimen name="workplace_icon_width">60dp</dimen>
+    <dimen name="workplace_icon_height">60dp</dimen>
+    <dimen name="spinner_width">125dp</dimen>
+
+</resources>

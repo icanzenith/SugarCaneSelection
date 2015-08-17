@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bt_changevalue_width">64dp</dimen>
+    <dimen name="bt_changevalue_height">64dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="header_menu_height">150dp</dimen>
+    <dimen name="text_menu_button">16sp</dimen>
+    <dimen name="subtitle">16sp</dimen>
+    <dimen name="table_name">16sp</dimen>
+    <dimen name="input_edittext">120dp</dimen>
+    <dimen name="picture_thumb_width">100dp</dimen>
+
+    <dimen name="review2_title">20sp</dimen>
+    <dimen name="review2_data">16sp</dimen>
+
+    <dimen name="workplace_icon_width">48dp</dimen>
+    <dimen name="workplace_icon_height">48dp</dimen>
+    <dimen name="spinner_width">80dp</dimen>
+</resources>
