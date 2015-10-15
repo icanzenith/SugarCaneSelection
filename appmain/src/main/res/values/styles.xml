@@ -20,6 +20,7 @@
         <item name="backgroundSplit">#228b22</item>
         <item name="progressBarStyle">@style/ProgressBar.Sugarcaneselection</item>
     </style>
+    <style name="Widget.SugarcaneSelectionRatingBar" parent="@android:style/Widget.Holo.RatingBar.Small"/>
 
     <style name="ActionBar.Transparent.Sugarcaneselection" parent="@style/Widget.AppCompat.Light.ActionBar">
         <item name="background">@drawable/ab_transparent_sugarcaneselection</item>

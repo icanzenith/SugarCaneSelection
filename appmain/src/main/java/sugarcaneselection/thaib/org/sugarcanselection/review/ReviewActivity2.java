@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,7 +35,7 @@ import sugarcaneselection.thaib.org.sugarcanselection.Params;
 import sugarcaneselection.thaib.org.sugarcanselection.R;
 import sugarcaneselection.thaib.org.sugarcanselection.database.Columns;
 
-public class ReviewActivity2 extends ActionBarActivity {
+public class ReviewActivity2 extends AppCompatActivity {
 
     private static final String ARG_CLONECODE = "CloneCode";
 

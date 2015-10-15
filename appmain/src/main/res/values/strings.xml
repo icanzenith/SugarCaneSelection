@@ -177,5 +177,6 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_newfeed">กิจกรรมล่าสุด</string>
     <string name="title_activity_home_activity2">HomeActivity2</string>
+    <string name="title_activity_review_clone_selected">ReviewCloneSelectedActivity</string>
 
 </resources>

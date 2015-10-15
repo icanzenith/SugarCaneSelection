@@ -2,12 +2,13 @@ package sugarcaneselection.thaib.org.sugarcanselection.newmain;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import sugarcaneselection.thaib.org.sugarcanselection.R;
 
-public class NewsfeedActivity extends ActionBarActivity {
+public class NewsfeedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

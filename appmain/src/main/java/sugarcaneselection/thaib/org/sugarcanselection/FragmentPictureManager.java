@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.os.Debug;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
@@ -244,17 +245,20 @@ public class FragmentPictureManager extends Fragment {
 
             if (c.getString(c.getColumnIndex(Columns.FULLPICURL)) != null) {
                 b.getCloneDataItem().setPicfull((c.getString(c.getColumnIndex(Columns.FULLPICURL))));
-                Picasso.with(getActivity()).load(new File(b.getCloneDataItem().getPicfull())).fit().centerCrop().into(ImageFULL);
+                Log.d("TAG", c.getString(c.getColumnIndex(Columns.FULLPICURL)));
+                isLinkOrFile(b.getCloneDataItem().getPicfull(), ImageFULL);
             }
 
             if (c.getString(c.getColumnIndex(Columns.UPPERPICURL)) != null) {
                 b.getCloneDataItem().setPicupper(c.getString(c.getColumnIndex(Columns.UPPERPICURL)));
-                Picasso.with(getActivity()).load(new File(b.getCloneDataItem().getPicupper())).fit().centerCrop().into(ImageUpper);
+                Log.d("TAG", c.getString(c.getColumnIndex(Columns.UPPERPICURL)));
+                isLinkOrFile(b.getCloneDataItem().getPicupper(),ImageUpper);
             }
 
             if (c.getString(c.getColumnIndex(Columns.LOWERPICURL)) != null) {
                 b.getCloneDataItem().setPiclower(c.getString(c.getColumnIndex(Columns.LOWERPICURL)));
-                Picasso.with(getActivity()).load(new File(b.getCloneDataItem().getPiclower())).fit().centerCrop().into(ImageLower);
+                Log.d("TAG",c.getString(c.getColumnIndex(Columns.LOWERPICURL)));
+                isLinkOrFile(b.getCloneDataItem().getPiclower(),ImageLower);
             }
 
         }
@@ -483,7 +487,7 @@ public class FragmentPictureManager extends Fragment {
                         galleryAddPic(isUpperImage);
                         Log.d("Result Upper", b.getCloneDataItem().getPicupper());
                         Log.d("Debug", "Result");
-                        Picasso.with(getActivity()).load(new File(b.getCloneDataItem().getPicupper())).fit().centerCrop().into(ImageUpper);
+                        isLinkOrFile(b.getCloneDataItem().getPicupper(),ImageUpper);
                     }
                     break;
 
@@ -494,7 +498,7 @@ public class FragmentPictureManager extends Fragment {
                         galleryAddPic(isLowerImage);
                         Log.d("Result Lower", b.getCloneDataItem().getPiclower());
                         Log.d("Debug", "Result");
-                        Picasso.with(getActivity()).load(new File(b.getCloneDataItem().getPiclower())).fit().centerCrop().into(ImageLower);
+                        isLinkOrFile(b.getCloneDataItem().getPiclower(), ImageLower);
                     }
                     break;
 
@@ -503,7 +507,7 @@ public class FragmentPictureManager extends Fragment {
                     if (resultCode == getActivity().RESULT_OK) {
                         mCurrentPhotoPath = b.getCloneDataItem().getPicfull();
                         galleryAddPic(isFullImage);
-                        Picasso.with(getActivity()).load(new File(b.getCloneDataItem().getPicfull())).fit().centerCrop().into(ImageFULL);
+                        isLinkOrFile(b.getCloneDataItem().getPicfull(), ImageFULL);
                     }
                     break;
 
@@ -536,6 +540,19 @@ public class FragmentPictureManager extends Fragment {
         mainActivity = (MainActivity) getActivity();
         mainActivity.onFinishTakepicture();
 
+    }
+
+    private void isLinkOrFile(String url,ImageView imageView){
+
+        if (url.contains("http://")){
+            Log.d("Debug Get Clone ",
+                    "From Picture");
+            Picasso.with(getActivity()).load(url).fit().centerCrop().rotate(270f).into(imageView);
+        }
+        else{
+            Picasso.with(getActivity()).load(new File(url)).into(imageView);
+
+        }
     }
 
     public interface OnFragmentInteractionListener {

@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:elevation="20dp"
+    card_view:cardElevation="20dp"
     card_view:cardCornerRadius="4dp"
     >
     <!-- card_view:cardBackgroundColor="@color/abc_input_method_navigation_guard"-->

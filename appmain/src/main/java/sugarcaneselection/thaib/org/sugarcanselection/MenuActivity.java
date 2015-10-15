@@ -50,7 +50,7 @@ public class MenuActivity extends AppCompatActivity {
 
         baseApplication = (BaseApplication) getApplication();
         getSupportActionBar().setTitle("กรุณาเลือกเมนูที่ต้องการ");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF228b22));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF228b22));
 
 
         tvWorkPlace = (TextView) findViewById(R.id.tvWorkplace);

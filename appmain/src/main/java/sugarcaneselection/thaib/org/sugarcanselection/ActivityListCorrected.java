@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,9 +26,10 @@ import java.util.HashMap;
 import sugarcaneselection.thaib.org.sugarcanselection.Item.SelectStatus;
 import sugarcaneselection.thaib.org.sugarcanselection.database.Columns;
 import sugarcaneselection.thaib.org.sugarcanselection.review.ReviewActivity2;
+import sugarcaneselection.thaib.org.sugarcanselection.review.util.ReviewCloneSelectedActivity;
 
 
-public class ActivityListCorrected extends ActionBarActivity {
+public class ActivityListCorrected extends AppCompatActivity {
 
     ListView mListView;
     ArrayList<myListItem> myListItems;
@@ -91,7 +93,6 @@ public class ActivityListCorrected extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF228b22));
         setContentView(R.layout.activity_activity_list_corrected);
         created = true;
 
@@ -111,7 +112,8 @@ public class ActivityListCorrected extends ActionBarActivity {
                 if (d.getType() == 0) {
 
                 } else {
-                    Intent intent = new Intent(ActivityListCorrected.this, ReviewActivity2.class);
+                    Intent intent = new Intent(ActivityListCorrected.this,ReviewCloneSelectedActivity.class);
+//                    Intent intent = new Intent(ActivityListCorrected.this, ReviewActivity2.class);
                     intent.putExtra("CloneCode", d.getCloneCode());
                     intent.putExtra("Activity", 1);
                     startActivity(intent);

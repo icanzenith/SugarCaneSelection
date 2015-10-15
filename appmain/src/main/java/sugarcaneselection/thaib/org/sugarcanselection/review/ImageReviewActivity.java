@@ -29,7 +29,7 @@ public class ImageReviewActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getWindow().requestFeature(Window.FEATURE_NO_TITLE|Window.FEATURE_ACTION_BAR);
+        getWindow().requestFeature(Window.FEATURE_NO_TITLE | Window.FEATURE_ACTION_BAR);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
@@ -39,11 +39,11 @@ public class ImageReviewActivity extends ActionBarActivity {
         btOK = (Button) findViewById(R.id.btOK);
 
 
-        if (getIntent()!=null){
+        if (getIntent() != null) {
             imagePath = getIntent().getStringExtra("Path");
-            ResultCode = getIntent().getIntExtra("ResultCode",0);
+            ResultCode = getIntent().getIntExtra("ResultCode", 0);
             imageView = (ImageView) findViewById(R.id.imageReview);
-            Picasso.with(this).load(new File(imagePath)).into(imageView);
+            isLinkOrFile(imagePath, imageView);
         }
 
         btChange.setOnClickListener(new View.OnClickListener() {
@@ -65,4 +65,13 @@ public class ImageReviewActivity extends ActionBarActivity {
 
     }
 
+    private void isLinkOrFile(String url, ImageView imageView) {
+
+        if (url.contains("http://")) {
+            Picasso.with(this).load(url).rotate(270f).into(imageView);
+        } else {
+            Picasso.with(this).load(new File(url)).into(imageView);
+
+        }
+    }
 }
